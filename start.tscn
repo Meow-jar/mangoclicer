@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ir4ml2oii3"]
+
+[ext_resource type="Texture2D" uid="uid://ccm6ur6jrtby5" path="res://resources/fonmango.png" id="1_ots34"]
+
+[node name="start" type="Node2D"]
+
+[node name="Fonmango" type="Sprite2D" parent="."]
+position = Vector2(602.99994, 393.75)
+scale = Vector2(3.5321105, 1.3778443)
+texture = ExtResource("1_ots34")
