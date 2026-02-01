@@ -10,17 +10,10 @@ config_version=5
 
 [application]
 
-config/name="mango"
-run/main_scene="res://node_2d.tscn"
+config/name="cliker"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=520
-window/size/viewport_height=1080
 
 [rendering]
 
 renderer/rendering_method="mobile"
-2d/snap/snap_2d_transforms_to_pixel=true
