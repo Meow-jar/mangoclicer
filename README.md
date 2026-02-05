@@ -1,1 +1,1 @@
-# MangoClicer
+# MangoClicker
