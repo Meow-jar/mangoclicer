@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2ir4ml2oii3"]
+[gd_scene load_steps=4 format=3 uid="uid://c2ir4ml2oii3"]
 
 [ext_resource type="Texture2D" uid="uid://6ydcum8b3cja" path="res://resources/Cookie-Free-Download-PNG.png" id="1_ots34"]
+[ext_resource type="Texture2D" uid="uid://pdnqh8flg6gs" path="res://resources/logoclicker.png" id="2_qn1rc"]
 
 [sub_resource type="GDScript" id="GDScript_ots34"]
 script/source = "extends Node2D
@@ -42,13 +43,10 @@ offset_bottom = 1498.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("1_ots34")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 304.0
-offset_top = 16.0
-offset_right = 1540.0
-offset_bottom = 472.0
-theme_override_font_sizes/font_size = 50
-text = "start"
+[node name="Logoclicker" type="Sprite2D" parent="."]
+position = Vector2(602, 303)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_qn1rc")
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
