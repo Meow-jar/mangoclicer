@@ -1,7 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2ir4ml2oii3"]
+[gd_scene format=3 uid="uid://c2ir4ml2oii3"]
 
 [ext_resource type="Texture2D" uid="uid://6ydcum8b3cja" path="res://resources/Cookie-Free-Download-PNG.png" id="1_ots34"]
 [ext_resource type="Texture2D" uid="uid://pdnqh8flg6gs" path="res://resources/logoclicker.png" id="2_qn1rc"]
+[ext_resource type="Texture2D" uid="uid://b5d0jne0jl6xj" path="res://resources_anim/anim0.png" id="3_mhwaj"]
+[ext_resource type="Texture2D" uid="uid://bfgcjaqftmu5t" path="res://resources_anim/anim1.png" id="4_ve1km"]
+[ext_resource type="Texture2D" uid="uid://dypm0hy73h14e" path="res://resources_anim/anim2.png" id="5_3iev3"]
+[ext_resource type="Texture2D" uid="uid://bs1bmalxg5anw" path="res://resources_anim/anim3.png" id="6_wvlwx"]
+[ext_resource type="Texture2D" uid="uid://35jagrpwxjfo" path="res://resources_anim/anim4.png" id="7_r34np"]
+[ext_resource type="Texture2D" uid="uid://dcfoj43fuxuoh" path="res://resources_anim/anim5.png" id="8_aj1oh"]
+[ext_resource type="Texture2D" uid="uid://dj2h0f7vsslii" path="res://resources_anim/anim6.png" id="9_33vth"]
+[ext_resource type="Texture2D" uid="uid://u6nx6ifwyoym" path="res://resources_anim/anim7.png" id="10_oxms4"]
+[ext_resource type="Texture2D" uid="uid://bp7aidbb4w5cb" path="res://resources_anim/anim8.png" id="11_0ywbk"]
+[ext_resource type="Texture2D" uid="uid://0o4bo3f2mbu0" path="res://resources_anim/anim9.png" id="12_6l51u"]
+[ext_resource type="Texture2D" uid="uid://canq4igpwxgvu" path="res://resources_anim/anim10.png" id="13_57npa"]
+[ext_resource type="Texture2D" uid="uid://guuybe1opcgu" path="res://resources_anim/anim12.png" id="14_t6l5f"]
+[ext_resource type="Texture2D" uid="uid://b1lt8jvrmmsh1" path="res://resources_anim/anim11.png" id="15_1wor7"]
 
 [sub_resource type="GDScript" id="GDScript_ots34"]
 script/source = "extends Node2D
@@ -18,24 +31,89 @@ func _process(delta: float) -> void:
 
 
 func _on_texture_button_button_down() -> void:
-	get_tree().change_scene_to_file(\"res://menu.tscn\")
+	$TextureButton.scale = Vector2(0.29, 0.29)
+	$TextureButton.position.x = 812
+	$TextureButton.position.y = 445
 	pass # Replace with function body.
 
 
 func _on_texture_button_button_up() -> void:
+	get_tree().change_scene_to_file(\"res://menu.tscn\")
 	pass # Replace with function body.
 "
 
-[node name="start" type="Node2D"]
+[sub_resource type="GDScript" id="GDScript_dl6l8"]
+script/source = "extends Sprite2D
+
+var x = 602
+var y = 303
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qn1rc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mhwaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ve1km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3iev3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wvlwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r34np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_aj1oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_33vth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oxms4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0ywbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6l51u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_57npa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t6l5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1wor7")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="start" type="Node2D" unique_id=394987049]
 script = SubResource("GDScript_ots34")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1576287582]
 offset_left = -4.0
 offset_right = 1936.0
 offset_bottom = 1082.0
 color = Color(0, 0.6156863, 1, 1)
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1628617424]
 offset_left = 808.0
 offset_top = 441.0
 offset_right = 1832.0
@@ -43,10 +121,19 @@ offset_bottom = 1498.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("1_ots34")
 
-[node name="Logoclicker" type="Sprite2D" parent="."]
+[node name="Logoclicker" type="Sprite2D" parent="." unique_id=1170376922]
 position = Vector2(602, 303)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_qn1rc")
+script = SubResource("GDScript_dl6l8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=698664644]
+visible = false
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_qn1rc")
+animation = &"new_animation"
+frame = 1
+frame_progress = 0.7386954
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr2tq06i5llql"]
+[gd_scene format=3 uid="uid://dr2tq06i5llql"]
 
 [ext_resource type="Texture2D" uid="uid://6ydcum8b3cja" path="res://resources/Cookie-Free-Download-PNG.png" id="1_ouk20"]
 
@@ -47,17 +47,17 @@ func _process(delta: float) -> void:
 	pass
 "
 
-[node name="Menu" type="Node2D"]
+[node name="Menu" type="Node2D" unique_id=12690442]
 script = SubResource("GDScript_lti8b")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1383748272]
 offset_left = -3.0
 offset_top = 1.0
 offset_right = 1932.0
 offset_bottom = 1085.0
 color = Color(0, 0.6156863, 1, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=374334573]
 offset_left = 211.0
 offset_top = 2.0
 offset_right = 598.0
@@ -65,7 +65,7 @@ offset_bottom = 211.0
 size_flags_horizontal = 6
 theme_override_font_sizes/font_size = 60
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=333771644]
 offset_left = 808.0
 offset_top = 441.0
 offset_right = 1832.0
@@ -76,7 +76,7 @@ size_flags_vertical = 6
 texture_normal = ExtResource("1_ouk20")
 metadata/_edit_use_anchors_ = true
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=214189832]
 position = Vector2(39, 39)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ouk20")
